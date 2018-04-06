@@ -23,4 +23,14 @@ export default function() {
       ]
     }
   });
+
+  this.get('/posts/:id', function() {
+    return {
+      id: 1,
+      title: 'Post 1',
+      meta: {
+        key: 'value'
+      }
+    }
+  });
 }
