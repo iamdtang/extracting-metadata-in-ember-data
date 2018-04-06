@@ -20,9 +20,9 @@ export default RESTSerializer.extend({
     return this._super(...arguments);
   },
   extractMeta(store, modelClass, payload) {
-    let { totalItems } = payload;
-    payload.meta = { totalItems };
-    delete payload.totalItems;
+    let { total } = payload;
+    payload.meta = { total };
+    delete payload.total;
     return this._super(...arguments);
   }
 });
